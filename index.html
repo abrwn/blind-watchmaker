@@ -1,51 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <style>
-
-        body{
-          font-family:courier;
-          max-width: 400px;
-          text-align: left;
-          color:lightGreen;
-          background: black;
-          line-height: 1.15;
-          margin: 0 auto;
-        }
-
-        .blink {
-           animation: blinker 1s cubic-bezier(0, 0, 0, 0) infinite;
-        }
-
-        @keyframes blinker {
-           50% { opacity: 0; }
-        }
-
-        .ascii {
-          display: block;
-          font-family: monospace;
-          white-space: pre;
-          margin: 1em 0px;
-        }
-
-        </style>
-
+        <meta charset="utf-8">
+        <title>Evolution</title>
+        <link rel="stylesheet" href="styles.css">
         <script src="script.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65980815-5"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-65980815-5');
+        </script>
     </head>
     <body>
 
-      <div class="ascii">
-                    _       _   _
-                   | |     | | (_)
-     _____   _____ | |_   _| |_ _  ___  _ ___
-    / _ \ \ / / _ \| | | | | __| |/ _ \| '_  \
-    | __/\ V / (_) | | |_| | |_| | (_) | | | |
-    \___| \_/ \___/|_|\__,_|\__|_|\___/|_| |_|
+        <div class="ascii">
+   _       _   _
+   | |     | | (_)
+_____   _____ | |_   _| |_ _  ___  _ ___
+/ _ \ \ / / _ \| | | | | __| |/ _ \| '_  \
+| __/\ V / (_) | | |_| | |_| | (_) | | | |
+\___| \_/ \___/|_|\__,_|\__|_|\___/|_| |_|
 
+        </div>
+
+
+
+
+    <h1>A JavaScript reinterpretation of the evolution model discussed in Richard Dawkins' 1986 book The Blind Watchmaker.</h1>
+    <ul>
+        <li>Creates a target string (in this case 'METHINKS IT IS A WEASEL'), which represents the end state of the evoloved form.</li>
+        <li>Generates a random string as the original ancestor of the evolved form.</li>
+        <li>Creates 15 mutant children of the original ancestor by changing 1 character in the string in each instance.</li>
+        <li>Chooses the instance of the mutant offspring that most closely matches the target string.</li>
+        <li>Creates 15 mutant children of this best match following the same method as for the first generation.</li>
+        <li>Repeats the cycle until the target is reached.</li>
+    </ul>
+
+    <p>Note: the process stops at 1000 generations in order to avoid killing the browser!</p>
+
+    <p>Hit Space to run "EVOLUTION"<span class="blink">...</span></p>
+    <div id="main-div">
     </div>
-
-
-      <div id="div1">
-          <p>Press any key to run "EVOLUTION"<span class="blink">...</span></p>
-      </div>
-    </body>
+  </body>
 </html>

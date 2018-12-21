@@ -1,10 +1,10 @@
 var target = "METHINKS IT IS A WEASEL";
 
-var offspringCount = 10;
+var offspringCount = 15;
 
-var generationMax = 500;
+var generationMax = 1000;
 
-var showEveryXResults = 2;
+var showEveryXResults = 5;
 
 function generateRandStr() {
   var text = "";
@@ -71,10 +71,10 @@ function returnHighest(arrOfObjs){
 function evolve(){
   var originalArr = generateMultiplesAndScore(generateRandStr);
   var BestChild = returnHighest(originalArr);
-  document.getElementById("div1").innerHTML = "First Ancestor: " + BestChild.name + "<br/>";
+  document.getElementById("main-div").innerHTML = "First Ancestor: " + BestChild.name + "<br/>";
 
   function reachTarget(){
-    document.getElementById("div1").innerHTML += "Generation " + z + ": " + BestChild.name + "<br/>";
+    document.getElementById("main-div").innerHTML += "Generation " + z + ": " + BestChild.name + "<br/>";
     window.scrollTo(0,document.body.scrollHeight);
   }
 
@@ -90,4 +90,10 @@ function evolve(){
   }
 }
 
-document.addEventListener("keydown", evolve);
+window.onload = function(){
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            evolve();
+        }
+    };
+}

@@ -1,0 +1,42 @@
+body{
+  font-family:courier;
+  max-width: 800px;
+  text-align: center;
+  color:lightGreen;
+  background: black;
+  line-height: 1.15;
+  margin: 0 auto;
+}
+
+h1{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+ul, #main-div{
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#main-div{
+    width: 390px;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.blink {
+   animation: blinker 1s cubic-bezier(0, 0, 0, 0) infinite;
+}
+
+@keyframes blinker {
+   50% { opacity: 0; }
+}
+
+.ascii {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0px;
+}
