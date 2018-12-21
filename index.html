@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+
+body{
+  font-family:courier;
+  max-width: 400px;
+  text-align: left;
+  color:lightGreen;
+  background: black;
+  line-height: 1.15;
+  margin: 0 auto;
+}
+
+.blink {
+   animation: blinker 1s cubic-bezier(0, 0, 0, 0) infinite;
+}
+
+@keyframes blinker {
+   50% { opacity: 0; }
+}
+
+.ascii {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0px;
+}
+
+</style>
+
+<script src="script.js"></script>
+</head>
+<body>
+
+  <div class="ascii">
+                _       _   _
+               | |     | | (_)
+ _____   _____ | |_   _| |_ _  ___  _ ___
+/ _ \ \ / / _ \| | | | | __| |/ _ \| '_  \
+| __/\ V / (_) | | |_| | |_| | (_) | | | |
+\___| \_/ \___/|_|\__,_|\__|_|\___/|_| |_|
+
+</div>
+
+
+  <div id="div1">
+      <p>Press any key to run "EVOLUTION"<span class="blink">...</span></p>
+  </div>
+</body>
+</html>
