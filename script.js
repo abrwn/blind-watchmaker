@@ -96,4 +96,7 @@ window.onload = function(){
             evolve();
         }
     };
+    document.getElementById('run').addEventListener('click', function () {
+      evolve();
+    });
 }

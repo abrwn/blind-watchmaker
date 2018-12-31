@@ -40,3 +40,7 @@ li{
   white-space: pre;
   margin: 1em 0px;
 }
+
+.run{
+    cursor: pointer;
+}
